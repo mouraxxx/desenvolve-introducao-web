@@ -1,0 +1,112 @@
+.supporting footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.benefits {
+    display: flex;
+    border-top:#1f295c solid 1px;
+    border-bottom: #1f295c solid 1px;
+}
+
+.benefits p {
+    flex-basis: 70%;
+}
+
+.benefits h3 {
+    order: 2;
+    align-self: center;
+    flex-basis: 30%;
+}
+
+.participation {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: #1f295c solid 1px;
+}
+
+.participation h3, .participation p {
+    flex-basis: 50%;
+}
+
+.participation h3 {
+    align-self: center;
+}
+
+
+
+
+
+
+a {
+    color: #1f295c;
+}
+
+a:houver {
+    color: #1a2a7a;
+}
+
+.main p:first-of-type::first-letter {
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
+}
+.design-selection li {
+    border-top:#1a2a7a solid 1px;
+    padding-top: 5px;
+}
+
+.design-selection li:first-of-type {
+    border-bottom:#1a2a7a solid 1px;
+    padding-bottom: 5px;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .design-selection {
+        position: static;
+        width: 100px;
+    }
+    
+    .explanation {
+        border-right: none;
+        width: 100px;
+    }
+
+    #zen-intro {
+        height: auto;
+    }
+
+    .participation {
+        flex-direction: column;
+    }
+
+    p {
+        text-indent: 0;
+    }
+}
+
+@media print {
+    html {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    #zen-intro header {
+        background-color: white;
+        color: #1f295c;
+    }
+}
+
+.design-selection {
+    position: static;
+    width: 100%;
+}
+
+.explanation {
+    border-right: none;
+    width: 100%;
+}
+
