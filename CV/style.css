@@ -1,0 +1,192 @@
+:root {
+    --cor-principal: #2c3e50;    
+    --cor-secundaria: #ecf0f1;   
+    --cor-destaque: #e74c3c;     
+    --cor-texto: #34495e;        
+    --fonte-titulo: 'Roboto Slab', serif; 
+    --fonte-texto: 'Open Sans', sans-serif; 
+}
+
+
+body {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+    margin: 0;
+    padding-top: 60px; 
+    background-color: var(--cor-secundaria);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-principal);
+}
+
+a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.section-container {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-principal);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#navbar a {
+    color: white;
+    display:block;
+    padding: 3px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+#navbar a:hover {
+    background-color: var(--cor-destaque); 
+    text-decoration: none;
+}
+
+.header-content {
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.foto-perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--cor-destaque);
+    margin: 20px 0;
+}
+
+.dados-contato {
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+}
+
+
+.registro-educacao, .registro-experiencia {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 5px solid var(--cor-destaque);
+    background-color: #f7f7f7;
+    border-radius: 4px;
+}
+
+
+.registro-certificacao {
+    border: 1px dashed #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.registro-certificacao .nome-curso strong {
+    color: var(--cor-destaque);
+    font-size: 1.1em;
+}
+
+.lista-habilidades {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer h3 {
+    color: white;
+    margin-top: 0;
+}
+
+.lista-redes-sociais {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.lista-redes-sociais a {
+    color: var(--cor-destaque);
+    font-weight: 600;
+}
+
+.copyright {
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-habilidades {
+    column-count: 1; 
+}
+
+@media (min-width: 769px) {
+
+    #navbar ul {
+        flex-direction: row; 
+        justify-content: center; 
+    }
+
+    #navbar li {
+        display: inline-block;
+    }
+
+    .header-content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .lista-habilidades {
+        column-count: 3;
+        column-gap: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-container {
+        padding: 40px;
+    }
+}
